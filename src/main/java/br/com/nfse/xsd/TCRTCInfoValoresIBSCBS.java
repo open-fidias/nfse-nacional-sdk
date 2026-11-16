@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2026.05.20 às 09:26:40 AM BRT 
+// Gerado em: 2026.11.16 às 04:59:00 PM BRT 
 //
 
 
@@ -24,8 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="gReeRepRes" type="{http://www.sped.fazenda.gov.br/nfse}TCRTCInfoReeRepRes" minOccurs="0"/>
- *         &lt;element name="trib" type="{http://www.sped.fazenda.gov.br/nfse}TCRTCInfoTributosIBSCBS"/>
+ *         &lt;element name="trib" type="{http://www.sped.fazenda.gov.br/nfse}TCRTCInfoTribIBSCBS"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,48 +35,22 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TCRTCInfoValoresIBSCBS", propOrder = {
-    "gReeRepRes",
     "trib"
 })
 public class TCRTCInfoValoresIBSCBS {
 
-    protected TCRTCInfoReeRepRes gReeRepRes;
     @XmlElement(required = true)
-    protected TCRTCInfoTributosIBSCBS trib;
-
-    /**
-     * Obtém o valor da propriedade gReeRepRes.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TCRTCInfoReeRepRes }
-     *     
-     */
-    public TCRTCInfoReeRepRes getGReeRepRes() {
-        return gReeRepRes;
-    }
-
-    /**
-     * Define o valor da propriedade gReeRepRes.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TCRTCInfoReeRepRes }
-     *     
-     */
-    public void setGReeRepRes(TCRTCInfoReeRepRes value) {
-        this.gReeRepRes = value;
-    }
+    protected TCRTCInfoTribIBSCBS trib;
 
     /**
      * Obtém o valor da propriedade trib.
      * 
      * @return
      *     possible object is
-     *     {@link TCRTCInfoTributosIBSCBS }
+     *     {@link TCRTCInfoTribIBSCBS }
      *     
      */
-    public TCRTCInfoTributosIBSCBS getTrib() {
+    public TCRTCInfoTribIBSCBS getTrib() {
         return trib;
     }
 
@@ -86,10 +59,10 @@ public class TCRTCInfoValoresIBSCBS {
      * 
      * @param value
      *     allowed object is
-     *     {@link TCRTCInfoTributosIBSCBS }
+     *     {@link TCRTCInfoTribIBSCBS }
      *     
      */
-    public void setTrib(TCRTCInfoTributosIBSCBS value) {
+    public void setTrib(TCRTCInfoTribIBSCBS value) {
         this.trib = value;
     }
 

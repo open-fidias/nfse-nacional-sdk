@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2026.05.20 às 09:26:40 AM BRT 
+// Gerado em: 2026.11.16 às 04:59:00 PM BRT 
 //
 
 
@@ -26,9 +26,9 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence>
  *         &lt;element name="cTribNac" type="{http://www.sped.fazenda.gov.br/nfse}TSCodTribNac"/>
  *         &lt;element name="cTribMun" type="{http://www.sped.fazenda.gov.br/nfse}TCCodTribMun" minOccurs="0"/>
- *         &lt;element name="xDescServ" type="{http://www.sped.fazenda.gov.br/nfse}TSDesc2000"/>
  *         &lt;element name="cNBS" type="{http://www.sped.fazenda.gov.br/nfse}TSCodNBS" minOccurs="0"/>
  *         &lt;element name="cIntContrib" type="{http://www.sped.fazenda.gov.br/nfse}TSCodigoInternoContribuinte" minOccurs="0"/>
+ *         &lt;element name="xDescServ" type="{http://www.sped.fazenda.gov.br/nfse}TSDesc2000"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -41,20 +41,20 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "TCCServ", propOrder = {
     "cTribNac",
     "cTribMun",
-    "xDescServ",
     "cnbs",
-    "cIntContrib"
+    "cIntContrib",
+    "xDescServ"
 })
 public class TCCServ {
 
     @XmlElement(required = true)
     protected String cTribNac;
     protected String cTribMun;
-    @XmlElement(required = true)
-    protected String xDescServ;
     @XmlElement(name = "cNBS")
     protected String cnbs;
     protected String cIntContrib;
+    @XmlElement(required = true)
+    protected String xDescServ;
 
     /**
      * Obtém o valor da propriedade cTribNac.
@@ -105,30 +105,6 @@ public class TCCServ {
     }
 
     /**
-     * Obtém o valor da propriedade xDescServ.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getXDescServ() {
-        return xDescServ;
-    }
-
-    /**
-     * Define o valor da propriedade xDescServ.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setXDescServ(String value) {
-        this.xDescServ = value;
-    }
-
-    /**
      * Obtém o valor da propriedade cnbs.
      * 
      * @return
@@ -174,6 +150,30 @@ public class TCCServ {
      */
     public void setCIntContrib(String value) {
         this.cIntContrib = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade xDescServ.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getXDescServ() {
+        return xDescServ;
+    }
+
+    /**
+     * Define o valor da propriedade xDescServ.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setXDescServ(String value) {
+        this.xDescServ = value;
     }
 
 }

@@ -2,12 +2,14 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2026.05.20 às 09:26:40 AM BRT 
+// Gerado em: 2026.11.16 às 04:59:00 PM BRT 
 //
 
 
 package br.com.nfse.xsd;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -24,15 +26,15 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="finNFSe" type="{http://www.sped.fazenda.gov.br/nfse}TSRTCFinNFSe"/>
  *         &lt;element name="indFinal" type="{http://www.sped.fazenda.gov.br/nfse}TSRTCIndFinal" minOccurs="0"/>
- *         &lt;element name="cIndOp" type="{http://www.sped.fazenda.gov.br/nfse}TSRTCCodIndOp"/>
+ *         &lt;element name="cIndOp" type="{http://www.sped.fazenda.gov.br/nfse}TSRTCCodIndOp" minOccurs="0"/>
  *         &lt;element name="tpOper" type="{http://www.sped.fazenda.gov.br/nfse}TSRTCTpOper" minOccurs="0"/>
  *         &lt;element name="gRefNFSe" type="{http://www.sped.fazenda.gov.br/nfse}TCInfoRefNFSe" minOccurs="0"/>
  *         &lt;element name="tpEnteGov" type="{http://www.sped.fazenda.gov.br/nfse}TSRTCTpEnteGov" minOccurs="0"/>
  *         &lt;element name="indDest" type="{http://www.sped.fazenda.gov.br/nfse}TSRTCIndDest"/>
  *         &lt;element name="dest" type="{http://www.sped.fazenda.gov.br/nfse}TCRTCInfoDest" minOccurs="0"/>
  *         &lt;element name="imovel" type="{http://www.sped.fazenda.gov.br/nfse}TCRTCInfoImovel" minOccurs="0"/>
+ *         &lt;element name="bensMoveis" type="{http://www.sped.fazenda.gov.br/nfse}TCRTCInfoBensMoveis" maxOccurs="1000" minOccurs="0"/>
  *         &lt;element name="valores" type="{http://www.sped.fazenda.gov.br/nfse}TCRTCInfoValoresIBSCBS"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -44,7 +46,6 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TCRTCInfoIBSCBS", propOrder = {
-    "finNFSe",
     "indFinal",
     "cIndOp",
     "tpOper",
@@ -53,14 +54,12 @@ import javax.xml.bind.annotation.XmlType;
     "indDest",
     "dest",
     "imovel",
+    "bensMoveis",
     "valores"
 })
 public class TCRTCInfoIBSCBS {
 
-    @XmlElement(required = true)
-    protected String finNFSe;
     protected String indFinal;
-    @XmlElement(required = true)
     protected String cIndOp;
     protected String tpOper;
     protected TCInfoRefNFSe gRefNFSe;
@@ -69,32 +68,9 @@ public class TCRTCInfoIBSCBS {
     protected String indDest;
     protected TCRTCInfoDest dest;
     protected TCRTCInfoImovel imovel;
+    protected List<TCRTCInfoBensMoveis> bensMoveis;
     @XmlElement(required = true)
     protected TCRTCInfoValoresIBSCBS valores;
-
-    /**
-     * Obtém o valor da propriedade finNFSe.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getFinNFSe() {
-        return finNFSe;
-    }
-
-    /**
-     * Define o valor da propriedade finNFSe.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setFinNFSe(String value) {
-        this.finNFSe = value;
-    }
 
     /**
      * Obtém o valor da propriedade indFinal.
@@ -286,6 +262,35 @@ public class TCRTCInfoIBSCBS {
      */
     public void setImovel(TCRTCInfoImovel value) {
         this.imovel = value;
+    }
+
+    /**
+     * Gets the value of the bensMoveis property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the bensMoveis property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getBensMoveis().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link TCRTCInfoBensMoveis }
+     * 
+     * 
+     */
+    public List<TCRTCInfoBensMoveis> getBensMoveis() {
+        if (bensMoveis == null) {
+            bensMoveis = new ArrayList<TCRTCInfoBensMoveis>();
+        }
+        return this.bensMoveis;
     }
 
     /**

@@ -6,15 +6,28 @@
     
     <modelVersion>4.0.0</modelVersion>
     
-    <groupId>io.github.eduardokuhn89</groupId>
-    <artifactId>nfse-client</artifactId>
-    <version>1.3.4</version>
+    <groupId>com.github.open-fidias</groupId>
+    <artifactId>nfse-nacional-sdk</artifactId>
+    <version>SNAPSHOT-DEV</version>
     <packaging>jar</packaging>
 
-    <name>NFS-e Client</name>
+    <name>nfse-nacional-sdk</name>
     <description>Cliente Java para integração simplificada com a NFS-e Nacional</description>
-    <url>https://github.com/EduardoKuhn89/nfse</url>
+    <url>https://github.com/open-fidias/nfse-nacional-sdk</url>
     <inceptionYear>2025</inceptionYear>
+
+    <repositories>
+        <repository>
+            <id>jr-ce-snapshots</id>
+            <url>https://jfrog.io</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
     
     <licenses>
         <license>
@@ -112,6 +125,11 @@
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
             <version>${okhttp.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk18on</artifactId>
+            <version>1.78</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.demoiselle.signer/signer-core -->

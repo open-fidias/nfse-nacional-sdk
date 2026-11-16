@@ -1,7 +1,6 @@
 package br.com.nfse;
 
 import br.com.nfse.dto.AutorEvento;
-import br.com.nfse.interfaces.HttpDataAware;
 import br.com.nfse.dto.ConvenioResult;
 import br.com.nfse.dto.EventoResult;
 import br.com.nfse.dto.HttpResult;
@@ -10,6 +9,7 @@ import br.com.nfse.dto.enuns.AmbienteEnum;
 import br.com.nfse.dto.enuns.TipoServicoEnum;
 import br.com.nfse.exception.HttpResponseException;
 import br.com.nfse.exception.XsdSchemaValidateException;
+import br.com.nfse.interfaces.HttpDataAware;
 import br.com.nfse.utils.DateUtils;
 import br.com.nfse.utils.OkHttpUtils;
 import br.com.nfse.utils.StringUtils;
@@ -22,11 +22,6 @@ import br.com.nfse.xsd.TCInfPedReg;
 import br.com.nfse.xsd.TCPedRegEvt;
 import br.com.nfse.xsd.TE101101;
 import com.google.gson.JsonObject;
-
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
-
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.time.ZonedDateTime;
@@ -36,8 +31,11 @@ import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
 import okhttp3.Protocol;
+import okhttp3.Request;
 import okhttp3.RequestBody;
+import okhttp3.Response;
 import okhttp3.ResponseBody;
 
 /**
@@ -67,6 +65,7 @@ public class Nfse {
         private ConfigManager config;
         private boolean assinar = true;
         private boolean validar = true;
+        private boolean habilitarModoDebug = false;
         private String chNFSe;
         private String chDPS;
 
@@ -172,6 +171,11 @@ public class Nfse {
             return this;
         }
 
+        public NfseBuilder habilitarModoDebug(boolean habilitarModoDebug) {
+            this.habilitarModoDebug = habilitarModoDebug;
+            return this;
+        }
+
         public NFSeResult enviarDps(TCDPS dps) throws Exception {
             validateConfig();
 
@@ -182,7 +186,7 @@ public class Nfse {
                         + StringUtils.zerosParaEsquerda(inscrFederal, 14)
                         + StringUtils.zerosParaEsquerda(dps.getInfDPS().getSerie(), 5)
                         + StringUtils.zerosParaEsquerda(dps.getInfDPS().getNDPS(), 15);
-                dps.getInfDPS().setNDPS("DPS" + idDps);
+                dps.getInfDPS().setId("DPS" + idDps);
             }
 
             String xml = XmlUtils.objectToXml(dps);
@@ -650,9 +654,9 @@ public class Nfse {
                     this.httpProtocol,
                     this.connectTimeoutMillis,
                     this.readTimeoutMillis,
-                    this.writeTimeoutMillis
+                    this.writeTimeoutMillis,
+                    this.habilitarModoDebug
             );
-
             return client;
         }
 

@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2026.05.20 às 09:26:40 AM BRT 
+// Gerado em: 2026.11.16 às 04:59:00 PM BRT 
 //
 
 
@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence>
  *         &lt;element name="vServPrest" type="{http://www.sped.fazenda.gov.br/nfse}TCVServPrest"/>
  *         &lt;element name="vDescCondIncond" type="{http://www.sped.fazenda.gov.br/nfse}TCVDescCondIncond" minOccurs="0"/>
- *         &lt;element name="vDedRed" type="{http://www.sped.fazenda.gov.br/nfse}TCInfoDedRed" minOccurs="0"/>
+ *         &lt;element name="vAjusteBC" type="{http://www.sped.fazenda.gov.br/nfse}TCInfoAjusteBC" minOccurs="0"/>
  *         &lt;element name="trib" type="{http://www.sped.fazenda.gov.br/nfse}TCInfoTributacao"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -40,7 +40,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "TCInfoValores", propOrder = {
     "vServPrest",
     "vDescCondIncond",
-    "vDedRed",
+    "vAjusteBC",
     "trib"
 })
 public class TCInfoValores {
@@ -48,7 +48,7 @@ public class TCInfoValores {
     @XmlElement(required = true)
     protected TCVServPrest vServPrest;
     protected TCVDescCondIncond vDescCondIncond;
-    protected TCInfoDedRed vDedRed;
+    protected TCInfoAjusteBC vAjusteBC;
     @XmlElement(required = true)
     protected TCInfoTributacao trib;
 
@@ -101,27 +101,27 @@ public class TCInfoValores {
     }
 
     /**
-     * Obtém o valor da propriedade vDedRed.
+     * Obtém o valor da propriedade vAjusteBC.
      * 
      * @return
      *     possible object is
-     *     {@link TCInfoDedRed }
+     *     {@link TCInfoAjusteBC }
      *     
      */
-    public TCInfoDedRed getVDedRed() {
-        return vDedRed;
+    public TCInfoAjusteBC getVAjusteBC() {
+        return vAjusteBC;
     }
 
     /**
-     * Define o valor da propriedade vDedRed.
+     * Define o valor da propriedade vAjusteBC.
      * 
      * @param value
      *     allowed object is
-     *     {@link TCInfoDedRed }
+     *     {@link TCInfoAjusteBC }
      *     
      */
-    public void setVDedRed(TCInfoDedRed value) {
-        this.vDedRed = value;
+    public void setVAjusteBC(TCInfoAjusteBC value) {
+        this.vAjusteBC = value;
     }
 
     /**

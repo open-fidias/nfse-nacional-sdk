@@ -1,17 +1,34 @@
 package br.com.nfse;
 
 import br.com.nfse.dto.danfse.*;
-import br.com.nfse.dto.danfse.DPS.*;
-import br.com.nfse.dto.danfse.IbsCbsNFSe.*;
+import br.com.nfse.dto.danfse.DPS.CServ;
+import br.com.nfse.dto.danfse.DPS.InfDPS;
+import br.com.nfse.dto.danfse.DPS.InfoCompl;
+import br.com.nfse.dto.danfse.DPS.LocPrest;
+import br.com.nfse.dto.danfse.DPS.PisCofins;
+import br.com.nfse.dto.danfse.DPS.Prestador;
+import br.com.nfse.dto.danfse.DPS.RegTrib;
+import br.com.nfse.dto.danfse.DPS.Servico;
+import br.com.nfse.dto.danfse.DPS.Tomador;
+import br.com.nfse.dto.danfse.DPS.TotTrib;
+import br.com.nfse.dto.danfse.DPS.TribFed;
+import br.com.nfse.dto.danfse.DPS.TribMun;
+import br.com.nfse.dto.danfse.DPS.Tributos;
+import br.com.nfse.dto.danfse.DPS.VDescCondIncond;
+import br.com.nfse.dto.danfse.DPS.VServPrest;
+import br.com.nfse.dto.danfse.DPS.VTotTrib;
+import br.com.nfse.dto.danfse.DPS.ValoresDPS;
+import br.com.nfse.dto.danfse.IbsCbsNFSe.AliqFed;
+import br.com.nfse.dto.danfse.IbsCbsNFSe.AliqMun;
+import br.com.nfse.dto.danfse.IbsCbsNFSe.AliqUF;
+import br.com.nfse.dto.danfse.IbsCbsNFSe.GCBS;
+import br.com.nfse.dto.danfse.IbsCbsNFSe.GIBS;
+import br.com.nfse.dto.danfse.IbsCbsNFSe.TotCIBS;
+import br.com.nfse.dto.danfse.IbsCbsNFSe.ValoresIbsCbs;
 import br.com.nfse.utils.MunicipioUtils;
 import br.com.nfse.utils.NumberUtils;
 import br.com.nfse.utils.QrCodeUtils;
 import br.com.nfse.utils.XmlUtils;
-
-import net.sf.jasperreports.engine.*;
-import net.sf.jasperreports.engine.export.JRPdfExporter;
-import net.sf.jasperreports.export.*;
-
 import java.io.*;
 import java.math.BigDecimal;
 import java.text.NumberFormat;
@@ -25,7 +42,12 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
+import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.export.SimpleExporterInput;
+import net.sf.jasperreports.export.SimpleOutputStreamExporterOutput;
+import net.sf.jasperreports.pdf.JRPdfExporter;
+import net.sf.jasperreports.pdf.SimplePdfExporterConfiguration;
 
 /*
   Gera o DANFSe (Documento Auxiliar da NFS-e) em PDF a partir de um XML de
