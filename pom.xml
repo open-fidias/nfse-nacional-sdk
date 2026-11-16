@@ -11,6 +11,19 @@
     <description>Cliente Java para integração simplificada com a NFS-e Nacional</description>
     <url>https://github.com/open-fidias/nfse-nacional-sdk</url>
     <inceptionYear>2025</inceptionYear>
+
+    <repositories>
+        <repository>
+            <id>jr-ce-snapshots</id>
+            <url>https://jfrog.io</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
     
     <licenses>
         <license>
@@ -23,7 +36,9 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>        
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <jasperreports.version>7.1.1</jasperreports.version>
+        <okhttp-version>4.12.0</okhttp-version>
     </properties>
     
     <dependencies>
@@ -77,8 +92,13 @@
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
-            <version>4.12.0</version>
-        </dependency>      
+            <version>${okhttp-version}</version>
+        </dependency>   
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>logging-interceptor</artifactId>
+            <version>${okhttp-version}</version>
+        </dependency>   
                             
         <!-- https://mvnrepository.com/artifact/org.demoiselle.signer/signer-core -->
         <dependency>
@@ -93,7 +113,7 @@
         <dependency>
             <groupId>net.sf.jasperreports</groupId>
             <artifactId>jasperreports</artifactId>
-            <version>6.21.3</version>
+            <version>${jasperreports.version}</version>
         </dependency>
         
         <dependency>
@@ -106,14 +126,20 @@
         <dependency>
             <groupId>net.sf.jasperreports</groupId>
             <artifactId>jasperreports-functions</artifactId>
-            <version>6.21.3</version>
-        </dependency>     
+            <version>${jasperreports.version}</version>
+        </dependency>
         
         <!-- https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports-metadata -->
         <dependency>
             <groupId>net.sf.jasperreports</groupId>
             <artifactId>jasperreports-metadata</artifactId>
-            <version>6.21.3</version>
+            <version>${jasperreports.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>net.sf.jasperreports</groupId>
+            <artifactId>jasperreports-pdf</artifactId>
+            <version>${jasperreports.version}</version>
         </dependency>
         
         <dependency>

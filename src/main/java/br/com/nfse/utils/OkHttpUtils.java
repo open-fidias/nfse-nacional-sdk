@@ -1,14 +1,6 @@
 package br.com.nfse.utils;
 
 import br.com.nfse.CertificateManager;
-
-import okhttp3.Cookie;
-import okhttp3.CookieJar;
-import okhttp3.HttpUrl;
-import okhttp3.OkHttpClient;
-import okhttp3.Protocol;
-
-import javax.net.ssl.*;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.net.Socket;
@@ -19,12 +11,20 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import javax.net.ssl.*;
+import okhttp3.Cookie;
+import okhttp3.CookieJar;
+import okhttp3.HttpUrl;
+import okhttp3.OkHttpClient;
+import okhttp3.Protocol;
 import okhttp3.Response;
+import okhttp3.logging.HttpLoggingInterceptor;
+import okhttp3.logging.HttpLoggingInterceptor.Level;
 
 public final class OkHttpUtils {
 
     public static OkHttpClient createHttpClient(OkHttpClient existingClient, CertificateManager certificado, Protocol httpProtocol,
-            int connectTimeoutMillis, int readTimeoutMillis, int writeTimeoutMillis) throws Exception {
+            int connectTimeoutMillis, int readTimeoutMillis, int writeTimeoutMillis, boolean habilitarDebug) throws Exception {
 
         if (existingClient != null) {
             return existingClient;
@@ -36,6 +36,11 @@ public final class OkHttpUtils {
                 .readTimeout(readTimeoutMillis, TimeUnit.MILLISECONDS)
                 .writeTimeout(writeTimeoutMillis, TimeUnit.MILLISECONDS);
 
+        if (habilitarDebug) {
+            HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+            interceptor.setLevel(Level.BODY);
+            clientBuilder.addInterceptor(interceptor);
+        }
         applySslFactory(clientBuilder, certificado);
 
         clientBuilder.cookieJar(new CookieJar() {

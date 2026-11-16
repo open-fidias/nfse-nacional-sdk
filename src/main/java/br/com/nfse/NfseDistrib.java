@@ -1,23 +1,21 @@
 package br.com.nfse;
 
-import br.com.nfse.dto.enuns.AmbienteEnum;
-import br.com.nfse.dto.DFeResult;
 import br.com.nfse.dto.DFeItem;
+import br.com.nfse.dto.DFeResult;
+import br.com.nfse.dto.enuns.AmbienteEnum;
 import br.com.nfse.utils.OkHttpUtils;
 import br.com.nfse.utils.XmlUtils;
 import br.com.nfse.utils.gson.GsonUtils;
-
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Protocol;
 import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
-import okhttp3.HttpUrl;
-
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
 
 /*
   https://adn.producaorestrita.nfse.gov.br/contribuintes/docs/index.html#section/Apresentacao
@@ -71,6 +69,7 @@ public class NfseDistrib {
         private int connectTimeoutMillis = 10_000;
         private int readTimeoutMillis = 60_000;
         private int writeTimeoutMillis = 15_000;
+        private boolean habilitarModoDebug = false;
 
         private ConfigManager config;
         private String chNFSe;
@@ -102,6 +101,11 @@ public class NfseDistrib {
 
         public NfseDistribBuilder httpProtocol(Protocol httpProtocol) {
             this.httpProtocol = httpProtocol;
+            return this;
+        }
+
+        public NfseDistribBuilder habilitarModoDebug(boolean habilitarModoDebug) {
+            this.habilitarModoDebug = habilitarModoDebug;
             return this;
         }
 
@@ -192,7 +196,8 @@ public class NfseDistrib {
                     this.httpProtocol,
                     this.connectTimeoutMillis,
                     this.readTimeoutMillis,
-                    this.writeTimeoutMillis
+                    this.writeTimeoutMillis,
+                    this.habilitarModoDebug
             );
 
             Request request = new Request.Builder()
