@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2026.05.20 às 09:26:40 AM BRT 
+// Gerado em: 2026.11.16 às 04:59:00 PM BRT 
 //
 
 
@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;/choice>
  *         &lt;element name="CAEPF" type="{http://www.sped.fazenda.gov.br/nfse}TSCAEPF" minOccurs="0"/>
  *         &lt;element name="IM" type="{http://www.sped.fazenda.gov.br/nfse}TSInscMun" minOccurs="0"/>
- *         &lt;element name="xNome" type="{http://www.sped.fazenda.gov.br/nfse}TSNomeRazaoSocial"/>
+ *         &lt;element name="xNome" type="{http://www.sped.fazenda.gov.br/nfse}TSNomeRazaoSocial" minOccurs="0"/>
  *         &lt;element name="end" type="{http://www.sped.fazenda.gov.br/nfse}TCEndereco" minOccurs="0"/>
  *         &lt;element name="fone" type="{http://www.sped.fazenda.gov.br/nfse}TSTelefone" minOccurs="0"/>
  *         &lt;element name="email" type="{http://www.sped.fazenda.gov.br/nfse}TSEmail" minOccurs="0"/>
@@ -72,7 +72,6 @@ public class TCInfoPessoa {
     protected String caepf;
     @XmlElement(name = "IM")
     protected String im;
-    @XmlElement(required = true)
     protected String xNome;
     protected TCEndereco end;
     protected String fone;

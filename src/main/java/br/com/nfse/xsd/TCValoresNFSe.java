@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2026.05.20 às 09:26:40 AM BRT 
+// Gerado em: 2026.11.16 às 04:59:00 PM BRT 
 //
 
 
@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="vCalcDR" type="{http://www.sped.fazenda.gov.br/nfse}TSDec15V2" minOccurs="0"/>
+ *         &lt;element name="vCalcAjusteBCISSQN" type="{http://www.sped.fazenda.gov.br/nfse}TSDec15V2" minOccurs="0"/>
  *         &lt;element name="tpBM" type="{http://www.sped.fazenda.gov.br/nfse}TBMISSQN" minOccurs="0"/>
  *         &lt;element name="vCalcBM" type="{http://www.sped.fazenda.gov.br/nfse}TSDec15V2" minOccurs="0"/>
  *         &lt;element name="vBC" type="{http://www.sped.fazenda.gov.br/nfse}TSDec15V2" minOccurs="0"/>
@@ -42,7 +42,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TCValoresNFSe", propOrder = {
-    "vCalcDR",
+    "vCalcAjusteBCISSQN",
     "tpBM",
     "vCalcBM",
     "vbc",
@@ -53,7 +53,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class TCValoresNFSe {
 
-    protected String vCalcDR;
+    protected String vCalcAjusteBCISSQN;
     protected String tpBM;
     protected String vCalcBM;
     @XmlElement(name = "vBC")
@@ -66,27 +66,27 @@ public class TCValoresNFSe {
     protected String vLiq;
 
     /**
-     * Obtém o valor da propriedade vCalcDR.
+     * Obtém o valor da propriedade vCalcAjusteBCISSQN.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getVCalcDR() {
-        return vCalcDR;
+    public String getVCalcAjusteBCISSQN() {
+        return vCalcAjusteBCISSQN;
     }
 
     /**
-     * Define o valor da propriedade vCalcDR.
+     * Define o valor da propriedade vCalcAjusteBCISSQN.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setVCalcDR(String value) {
-        this.vCalcDR = value;
+    public void setVCalcAjusteBCISSQN(String value) {
+        this.vCalcAjusteBCISSQN = value;
     }
 
     /**

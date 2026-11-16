@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2026.05.20 às 09:26:40 AM BRT 
+// Gerado em: 2026.11.16 às 04:59:00 PM BRT 
 //
 
 
@@ -33,6 +33,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="dCompet" type="{http://www.sped.fazenda.gov.br/nfse}TSData"/>
  *         &lt;element name="tpEmit" type="{http://www.sped.fazenda.gov.br/nfse}TSEmitenteDPS"/>
  *         &lt;element name="cMotivoEmisTI" type="{http://www.sped.fazenda.gov.br/nfse}TSMotivoEmisTI" minOccurs="0"/>
+ *         &lt;element name="finNFSe" type="{http://www.sped.fazenda.gov.br/nfse}TSRTCFinNFSe"/>
  *         &lt;element name="chNFSeRej" type="{http://www.sped.fazenda.gov.br/nfse}TSChaveNFSe" minOccurs="0"/>
  *         &lt;element name="cLocEmi" type="{http://www.sped.fazenda.gov.br/nfse}TSCodMunIBGE"/>
  *         &lt;element name="subst" type="{http://www.sped.fazenda.gov.br/nfse}TCSubstituicao" minOccurs="0"/>
@@ -61,6 +62,7 @@ import javax.xml.bind.annotation.XmlType;
     "dCompet",
     "tpEmit",
     "cMotivoEmisTI",
+    "finNFSe",
     "chNFSeRej",
     "cLocEmi",
     "subst",
@@ -88,6 +90,8 @@ public class TCInfDPS {
     @XmlElement(required = true)
     protected String tpEmit;
     protected String cMotivoEmisTI;
+    @XmlElement(required = true)
+    protected String finNFSe;
     protected String chNFSeRej;
     @XmlElement(required = true)
     protected String cLocEmi;
@@ -295,6 +299,30 @@ public class TCInfDPS {
      */
     public void setCMotivoEmisTI(String value) {
         this.cMotivoEmisTI = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade finNFSe.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFinNFSe() {
+        return finNFSe;
+    }
+
+    /**
+     * Define o valor da propriedade finNFSe.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFinNFSe(String value) {
+        this.finNFSe = value;
     }
 
     /**

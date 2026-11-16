@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2026.05.20 às 09:26:40 AM BRT 
+// Gerado em: 2026.11.16 às 04:59:00 PM BRT 
 //
 
 
@@ -24,10 +24,10 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="cLocalidadeIncid" type="{http://www.sped.fazenda.gov.br/nfse}TSCodMunIBGE"/>
- *         &lt;element name="xLocalidadeIncid" type="{http://www.sped.fazenda.gov.br/nfse}TSDesc600"/>
+ *         &lt;element name="cLocalidadeIncid" type="{http://www.sped.fazenda.gov.br/nfse}TSCodMunIBGE" minOccurs="0"/>
+ *         &lt;element name="xLocalidadeIncid" type="{http://www.sped.fazenda.gov.br/nfse}TSDesc600" minOccurs="0"/>
  *         &lt;element name="pRedutor" type="{http://www.sped.fazenda.gov.br/nfse}TSDec2V2" minOccurs="0"/>
- *         &lt;element name="valores" type="{http://www.sped.fazenda.gov.br/nfse}TCRTCValoresIBSCBS"/>
+ *         &lt;element name="valores" type="{http://www.sped.fazenda.gov.br/nfse}TCRTCValoresIBSCBS" minOccurs="0"/>
  *         &lt;element name="totCIBS" type="{http://www.sped.fazenda.gov.br/nfse}TCRTCTotalCIBS"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -47,12 +47,9 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class TCRTCIBSCBS {
 
-    @XmlElement(required = true)
     protected String cLocalidadeIncid;
-    @XmlElement(required = true)
     protected String xLocalidadeIncid;
     protected String pRedutor;
-    @XmlElement(required = true)
     protected TCRTCValoresIBSCBS valores;
     @XmlElement(required = true)
     protected TCRTCTotalCIBS totCIBS;

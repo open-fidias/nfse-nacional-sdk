@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2026.05.20 às 09:26:40 AM BRT 
+// Gerado em: 2026.11.16 às 04:59:00 PM BRT 
 //
 
 
@@ -25,8 +25,8 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="vTotNF" type="{http://www.sped.fazenda.gov.br/nfse}TSDec15V2"/>
- *         &lt;element name="gIBS" type="{http://www.sped.fazenda.gov.br/nfse}TCRTCTotalIBS"/>
- *         &lt;element name="gCBS" type="{http://www.sped.fazenda.gov.br/nfse}TCRTCTotalCBS"/>
+ *         &lt;element name="gIBS" type="{http://www.sped.fazenda.gov.br/nfse}TCRTCTotalIBS" minOccurs="0"/>
+ *         &lt;element name="gCBS" type="{http://www.sped.fazenda.gov.br/nfse}TCRTCTotalCBS" minOccurs="0"/>
  *         &lt;element name="gTribRegular" type="{http://www.sped.fazenda.gov.br/nfse}TCRTCTotalTribRegular" minOccurs="0"/>
  *         &lt;element name="gTribCompraGov" type="{http://www.sped.fazenda.gov.br/nfse}TCRTCTotalTribCompraGov" minOccurs="0"/>
  *       &lt;/sequence>
@@ -49,9 +49,9 @@ public class TCRTCTotalCIBS {
 
     @XmlElement(required = true)
     protected String vTotNF;
-    @XmlElement(name = "gIBS", required = true)
+    @XmlElement(name = "gIBS")
     protected TCRTCTotalIBS gibs;
-    @XmlElement(name = "gCBS", required = true)
+    @XmlElement(name = "gCBS")
     protected TCRTCTotalCBS gcbs;
     protected TCRTCTotalTribRegular gTribRegular;
     protected TCRTCTotalTribCompraGov gTribCompraGov;

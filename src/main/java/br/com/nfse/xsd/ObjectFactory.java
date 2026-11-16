@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2026.05.20 às 09:26:40 AM BRT 
+// Gerado em: 2026.11.16 às 04:59:00 PM BRT 
 //
 
 
@@ -61,11 +61,11 @@ public class ObjectFactory {
     private final static QName _CanonicalizationMethod_QNAME = new QName("http://www.w3.org/2000/09/xmldsig#", "CanonicalizationMethod");
     private final static QName _SignedInfo_QNAME = new QName("http://www.w3.org/2000/09/xmldsig#", "SignedInfo");
     private final static QName _Manifest_QNAME = new QName("http://www.w3.org/2000/09/xmldsig#", "Manifest");
-    private final static QName _TransformTypeXPath_QNAME = new QName("http://www.w3.org/2000/09/xmldsig#", "XPath");
-    private final static QName _SPKIDataTypeSPKISexp_QNAME = new QName("http://www.w3.org/2000/09/xmldsig#", "SPKISexp");
-    private final static QName _SignatureMethodTypeHMACOutputLength_QNAME = new QName("http://www.w3.org/2000/09/xmldsig#", "HMACOutputLength");
     private final static QName _PGPDataTypePGPKeyID_QNAME = new QName("http://www.w3.org/2000/09/xmldsig#", "PGPKeyID");
     private final static QName _PGPDataTypePGPKeyPacket_QNAME = new QName("http://www.w3.org/2000/09/xmldsig#", "PGPKeyPacket");
+    private final static QName _SignatureMethodTypeHMACOutputLength_QNAME = new QName("http://www.w3.org/2000/09/xmldsig#", "HMACOutputLength");
+    private final static QName _SPKIDataTypeSPKISexp_QNAME = new QName("http://www.w3.org/2000/09/xmldsig#", "SPKISexp");
+    private final static QName _TransformTypeXPath_QNAME = new QName("http://www.w3.org/2000/09/xmldsig#", "XPath");
     private final static QName _X509DataTypeX509IssuerSerial_QNAME = new QName("http://www.w3.org/2000/09/xmldsig#", "X509IssuerSerial");
     private final static QName _X509DataTypeX509CRL_QNAME = new QName("http://www.w3.org/2000/09/xmldsig#", "X509CRL");
     private final static QName _X509DataTypeX509SubjectName_QNAME = new QName("http://www.w3.org/2000/09/xmldsig#", "X509SubjectName");
@@ -104,19 +104,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link TCPedRegEvt }
-     * 
-     */
-    public TCPedRegEvt createTCPedRegEvt() {
-        return new TCPedRegEvt();
-    }
-
-    /**
      * Create an instance of {@link TCNC }
      * 
      */
     public TCNC createTCNC() {
         return new TCNC();
+    }
+
+    /**
+     * Create an instance of {@link TCPedRegEvt }
+     * 
+     */
+    public TCPedRegEvt createTCPedRegEvt() {
+        return new TCPedRegEvt();
     }
 
     /**
@@ -320,6 +320,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link TCListaDocAjusteBC }
+     * 
+     */
+    public TCListaDocAjusteBC createTCListaDocAjusteBC() {
+        return new TCListaDocAjusteBC();
+    }
+
+    /**
      * Create an instance of {@link TCInfoTributacao }
      * 
      */
@@ -344,11 +352,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link TCInfoDedRed }
+     * Create an instance of {@link TCRTCLocacaoImovel }
      * 
      */
-    public TCInfoDedRed createTCInfoDedRed() {
-        return new TCInfoDedRed();
+    public TCRTCLocacaoImovel createTCRTCLocacaoImovel() {
+        return new TCRTCLocacaoImovel();
     }
 
     /**
@@ -405,6 +413,14 @@ public class ObjectFactory {
      */
     public TCRTCTotalCBSCredPres createTCRTCTotalCBSCredPres() {
         return new TCRTCTotalCBSCredPres();
+    }
+
+    /**
+     * Create an instance of {@link TCRTCInfoBensMoveis }
+     * 
+     */
+    public TCRTCInfoBensMoveis createTCRTCInfoBensMoveis() {
+        return new TCRTCInfoBensMoveis();
     }
 
     /**
@@ -472,6 +488,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link TCRTCInfoTribIBSCBS }
+     * 
+     */
+    public TCRTCInfoTribIBSCBS createTCRTCInfoTribIBSCBS() {
+        return new TCRTCInfoTribIBSCBS();
+    }
+
+    /**
      * Create an instance of {@link TCTribTotal }
      * 
      */
@@ -501,14 +525,6 @@ public class ObjectFactory {
      */
     public TE202201 createTE202201() {
         return new TE202201();
-    }
-
-    /**
-     * Create an instance of {@link TCDocDedRed }
-     * 
-     */
-    public TCDocDedRed createTCDocDedRed() {
-        return new TCDocDedRed();
     }
 
     /**
@@ -600,22 +616,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link TCRTCInfoTributosIBSCBS }
-     * 
-     */
-    public TCRTCInfoTributosIBSCBS createTCRTCInfoTributosIBSCBS() {
-        return new TCRTCInfoTributosIBSCBS();
-    }
-
-    /**
-     * Create an instance of {@link TCListaDocDedRed }
-     * 
-     */
-    public TCListaDocDedRed createTCListaDocDedRed() {
-        return new TCListaDocDedRed();
-    }
-
-    /**
      * Create an instance of {@link TCDocNFNFS }
      * 
      */
@@ -640,6 +640,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link TCEnderImovel }
+     * 
+     */
+    public TCEnderImovel createTCEnderImovel() {
+        return new TCEnderImovel();
+    }
+
+    /**
      * Create an instance of {@link TCRTCListaDocFornec }
      * 
      */
@@ -656,19 +664,19 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link TCRTCUnidadesImobiliarias }
+     * 
+     */
+    public TCRTCUnidadesImobiliarias createTCRTCUnidadesImobiliarias() {
+        return new TCRTCUnidadesImobiliarias();
+    }
+
+    /**
      * Create an instance of {@link TCRTCInfoTributosDif }
      * 
      */
     public TCRTCInfoTributosDif createTCRTCInfoTributosDif() {
         return new TCRTCInfoTributosDif();
-    }
-
-    /**
-     * Create an instance of {@link TCRTCListaDoc }
-     * 
-     */
-    public TCRTCListaDoc createTCRTCListaDoc() {
-        return new TCRTCListaDoc();
     }
 
     /**
@@ -680,19 +688,19 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link TCRTCValoresBCImoveis }
+     * 
+     */
+    public TCRTCValoresBCImoveis createTCRTCValoresBCImoveis() {
+        return new TCRTCValoresBCImoveis();
+    }
+
+    /**
      * Create an instance of {@link TCInfNFSe }
      * 
      */
     public TCInfNFSe createTCInfNFSe() {
         return new TCInfNFSe();
-    }
-
-    /**
-     * Create an instance of {@link TCRTCInfoReeRepRes }
-     * 
-     */
-    public TCRTCInfoReeRepRes createTCRTCInfoReeRepRes() {
-        return new TCRTCInfoReeRepRes();
     }
 
     /**
@@ -760,6 +768,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link TCInfoAjusteBC }
+     * 
+     */
+    public TCInfoAjusteBC createTCInfoAjusteBC() {
+        return new TCInfoAjusteBC();
+    }
+
+    /**
      * Create an instance of {@link TCRTCValoresIBSCBSFed }
      * 
      */
@@ -789,6 +805,14 @@ public class ObjectFactory {
      */
     public TCAtvEvento createTCAtvEvento() {
         return new TCAtvEvento();
+    }
+
+    /**
+     * Create an instance of {@link TCDocAjusteBC }
+     * 
+     */
+    public TCDocAjusteBC createTCDocAjusteBC() {
+        return new TCDocAjusteBC();
     }
 
     /**
@@ -1285,33 +1309,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.w3.org/2000/09/xmldsig#", name = "XPath", scope = TransformType.class)
-    public JAXBElement<String> createTransformTypeXPath(String value) {
-        return new JAXBElement<String>(_TransformTypeXPath_QNAME, String.class, TransformType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link byte[]}{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.w3.org/2000/09/xmldsig#", name = "SPKISexp", scope = SPKIDataType.class)
-    public JAXBElement<byte[]> createSPKIDataTypeSPKISexp(byte[] value) {
-        return new JAXBElement<byte[]>(_SPKIDataTypeSPKISexp_QNAME, byte[].class, SPKIDataType.class, ((byte[]) value));
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigInteger }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.w3.org/2000/09/xmldsig#", name = "HMACOutputLength", scope = SignatureMethodType.class)
-    public JAXBElement<BigInteger> createSignatureMethodTypeHMACOutputLength(BigInteger value) {
-        return new JAXBElement<BigInteger>(_SignatureMethodTypeHMACOutputLength_QNAME, BigInteger.class, SignatureMethodType.class, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link byte[]}{@code >}}
      * 
      */
@@ -1327,6 +1324,33 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://www.w3.org/2000/09/xmldsig#", name = "PGPKeyPacket", scope = PGPDataType.class)
     public JAXBElement<byte[]> createPGPDataTypePGPKeyPacket(byte[] value) {
         return new JAXBElement<byte[]>(_PGPDataTypePGPKeyPacket_QNAME, byte[].class, PGPDataType.class, ((byte[]) value));
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigInteger }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.w3.org/2000/09/xmldsig#", name = "HMACOutputLength", scope = SignatureMethodType.class)
+    public JAXBElement<BigInteger> createSignatureMethodTypeHMACOutputLength(BigInteger value) {
+        return new JAXBElement<BigInteger>(_SignatureMethodTypeHMACOutputLength_QNAME, BigInteger.class, SignatureMethodType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link byte[]}{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.w3.org/2000/09/xmldsig#", name = "SPKISexp", scope = SPKIDataType.class)
+    public JAXBElement<byte[]> createSPKIDataTypeSPKISexp(byte[] value) {
+        return new JAXBElement<byte[]>(_SPKIDataTypeSPKISexp_QNAME, byte[].class, SPKIDataType.class, ((byte[]) value));
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.w3.org/2000/09/xmldsig#", name = "XPath", scope = TransformType.class)
+    public JAXBElement<String> createTransformTypeXPath(String value) {
+        return new JAXBElement<String>(_TransformTypeXPath_QNAME, String.class, TransformType.class, value);
     }
 
     /**

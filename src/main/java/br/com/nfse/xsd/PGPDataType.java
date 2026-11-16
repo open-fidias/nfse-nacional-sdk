@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2026.05.20 às 09:26:40 AM BRT 
+// Gerado em: 2026.11.16 às 04:59:00 PM BRT 
 //
 
 
@@ -66,8 +66,8 @@ public class PGPDataType {
      * <p>
      * Você está obtendo esta propriedade "catch-all" pelo seguinte motivo: 
      * O nome do campo "PGPKeyPacket" é usado por duas partes diferentes de um esquema. Consulte: 
-     * linha 218 de file:/C:/Sistema/utilitarios/nf-libs/nfse/xsd/1.01/PL_NFSE_NT04_RTCv101/xmldsig-core-schema.xsd
-     * linha 213 de file:/C:/Sistema/utilitarios/nf-libs/nfse/xsd/1.01/PL_NFSE_NT04_RTCv101/xmldsig-core-schema.xsd
+     * linha 209 de file:/home/atila/NetBeansProjects/nfse-nacional-sdk/src/main/resources/schemas/1.01/xmldsig-core-schema.xsd
+     * linha 204 de file:/home/atila/NetBeansProjects/nfse-nacional-sdk/src/main/resources/schemas/1.01/xmldsig-core-schema.xsd
      * <p>
      * Para eliminar esta propriedade, aplique uma personalização de propriedade a uma 
      * das seguintes declarações, a fim de alterar seus nomes: 
@@ -88,10 +88,10 @@ public class PGPDataType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link JAXBElement }{@code <}{@link byte[]}{@code >}
-     * {@link JAXBElement }{@code <}{@link byte[]}{@code >}
-     * {@link Object }
      * {@link Element }
+     * {@link Object }
+     * {@link JAXBElement }{@code <}{@link byte[]}{@code >}
+     * {@link JAXBElement }{@code <}{@link byte[]}{@code >}
      * 
      * 
      */

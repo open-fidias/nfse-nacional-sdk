@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2026.05.20 às 09:26:40 AM BRT 
+// Gerado em: 2026.11.16 às 04:59:00 PM BRT 
 //
 
 
@@ -24,8 +24,9 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="vBC" type="{http://www.sped.fazenda.gov.br/nfse}TSDec15V2"/>
- *         &lt;element name="vCalcReeRepRes" type="{http://www.sped.fazenda.gov.br/nfse}TSDec15V2" minOccurs="0"/>
+ *         &lt;element name="vBC" type="{http://www.sped.fazenda.gov.br/nfse}TSDec15V2" minOccurs="0"/>
+ *         &lt;element name="vCalcAjusteBCLocImoveis" type="{http://www.sped.fazenda.gov.br/nfse}TSDec15V2" minOccurs="0"/>
+ *         &lt;element name="vCalcAjusteBCIBSCBS" type="{http://www.sped.fazenda.gov.br/nfse}TSDec15V2" minOccurs="0"/>
  *         &lt;element name="uf" type="{http://www.sped.fazenda.gov.br/nfse}TCRTCValoresIBSCBSUF"/>
  *         &lt;element name="mun" type="{http://www.sped.fazenda.gov.br/nfse}TCRTCValoresIBSCBSMun"/>
  *         &lt;element name="fed" type="{http://www.sped.fazenda.gov.br/nfse}TCRTCValoresIBSCBSFed"/>
@@ -40,16 +41,18 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TCRTCValoresIBSCBS", propOrder = {
     "vbc",
-    "vCalcReeRepRes",
+    "vCalcAjusteBCLocImoveis",
+    "vCalcAjusteBCIBSCBS",
     "uf",
     "mun",
     "fed"
 })
 public class TCRTCValoresIBSCBS {
 
-    @XmlElement(name = "vBC", required = true)
+    @XmlElement(name = "vBC")
     protected String vbc;
-    protected String vCalcReeRepRes;
+    protected String vCalcAjusteBCLocImoveis;
+    protected String vCalcAjusteBCIBSCBS;
     @XmlElement(required = true)
     protected TCRTCValoresIBSCBSUF uf;
     @XmlElement(required = true)
@@ -82,27 +85,51 @@ public class TCRTCValoresIBSCBS {
     }
 
     /**
-     * Obtém o valor da propriedade vCalcReeRepRes.
+     * Obtém o valor da propriedade vCalcAjusteBCLocImoveis.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getVCalcReeRepRes() {
-        return vCalcReeRepRes;
+    public String getVCalcAjusteBCLocImoveis() {
+        return vCalcAjusteBCLocImoveis;
     }
 
     /**
-     * Define o valor da propriedade vCalcReeRepRes.
+     * Define o valor da propriedade vCalcAjusteBCLocImoveis.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setVCalcReeRepRes(String value) {
-        this.vCalcReeRepRes = value;
+    public void setVCalcAjusteBCLocImoveis(String value) {
+        this.vCalcAjusteBCLocImoveis = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade vCalcAjusteBCIBSCBS.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getVCalcAjusteBCIBSCBS() {
+        return vCalcAjusteBCIBSCBS;
+    }
+
+    /**
+     * Define o valor da propriedade vCalcAjusteBCIBSCBS.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setVCalcAjusteBCIBSCBS(String value) {
+        this.vCalcAjusteBCIBSCBS = value;
     }
 
     /**

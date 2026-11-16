@@ -170,7 +170,7 @@ public class NFSeResult implements HttpDataAware {
         return "NFSeResult{" + "successful=" + successful + ", tipoAmbiente=" + tipoAmbiente + ", versaoAplicativo=" + versaoAplicativo + ", idDPS=" + idDPS + ", chaveAcesso=" + chaveAcesso + '}';
     }
 
-    private class Alertas {
+    public class Alertas {
 
         private String codigo;
         private String mensagem;
@@ -219,7 +219,7 @@ public class NFSeResult implements HttpDataAware {
 
     }
 
-    private class Erros {
+    public class Erros {
 
         private String Codigo;
         private String Descricao;
