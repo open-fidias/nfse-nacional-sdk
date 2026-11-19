@@ -69,6 +69,7 @@
         <commons-io.version>2.16.1</commons-io.version>
         <okhttp.version>4.12.0</okhttp.version>
         <demoiselle-signer.version>4.4.0</demoiselle-signer.version>
+        <jasperreports.version>6.21.5</jasperreports.version>
         
         <maven-compiler.version>3.14.0</maven-compiler.version>
         <central-publishing-maven.version>0.8.0</central-publishing-maven.version>
@@ -145,7 +146,7 @@
         <dependency>
             <groupId>net.sf.jasperreports</groupId>
             <artifactId>jasperreports</artifactId>
-            <version>6.21.3</version>
+            <version>${jasperreports.version}</version>
         </dependency>
         
         <dependency>
@@ -158,14 +159,14 @@
         <dependency>
             <groupId>net.sf.jasperreports</groupId>
             <artifactId>jasperreports-functions</artifactId>
-            <version>6.21.3</version>
+            <version>${jasperreports.version}</version>
         </dependency>     
         
         <!-- https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports-metadata -->
         <dependency>
             <groupId>net.sf.jasperreports</groupId>
             <artifactId>jasperreports-metadata</artifactId>
-            <version>6.21.3</version>
+            <version>${jasperreports.version}</version>
         </dependency>
         
         <dependency>
