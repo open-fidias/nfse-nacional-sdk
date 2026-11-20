@@ -43,11 +43,12 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.export.JRPdfExporter;
 import net.sf.jasperreports.engine.util.JRLoader;
 import net.sf.jasperreports.export.SimpleExporterInput;
 import net.sf.jasperreports.export.SimpleOutputStreamExporterOutput;
-import net.sf.jasperreports.pdf.JRPdfExporter;
-import net.sf.jasperreports.pdf.SimplePdfExporterConfiguration;
+import net.sf.jasperreports.export.SimplePdfExporterConfiguration;
+
 
 /*
   Gera o DANFSe (Documento Auxiliar da NFS-e) em PDF a partir de um XML de
