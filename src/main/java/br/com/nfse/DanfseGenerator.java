@@ -330,7 +330,6 @@ public class DanfseGenerator {
 
                 if (infDps.getIBSCBS() != null) {
                     cIndOp = valueOrHyphen(infDps.getIBSCBS().getcIndOp());
-                    result.put("xFinNFSe", valueOrHyphen(infDps.getIBSCBS().getxFinNFSe()));
                     if (infDps.getIBSCBS().getValores() != null && infDps.getIBSCBS().getValores().getTrib() != null) {
                         result.put("CST", valueOrHyphen(infDps.getIBSCBS().getValores().getTrib().getgIBSCBS().getCST()));
                         result.put("cClassTrib", valueOrHyphen(infDps.getIBSCBS().getValores().getTrib().getgIBSCBS().getcClassTrib()));
@@ -514,6 +513,7 @@ public class DanfseGenerator {
 
             result.put("ambGer", inf.getAmbGer());
             result.put("xAmbGer", inf.getXAmbGer());
+            result.put("xFinNFSe", valueOrHyphen(infDps.getxFinNFSe()));
 
             if (dps != null) {
                 result.put("tpAmb", dps.getInfDPS().getTpAmb());

@@ -59,6 +59,9 @@ public class DPS {
         @XmlElement(name = "tpEmit", namespace = "http://www.sped.fazenda.gov.br/nfse")
         private String tpEmit;
 
+        @XmlElement(name = "finNFSe", namespace = "http://www.sped.fazenda.gov.br/nfse")
+        private String finNFSe;
+
         @XmlElement(name = "cLocEmi", namespace = "http://www.sped.fazenda.gov.br/nfse")
         private String cLocEmi;
 
@@ -141,6 +144,14 @@ public class DPS {
             this.tpEmit = tpEmit;
         }
 
+        public String getFinNFSe() {
+            return finNFSe;
+        }
+
+        public void setFinNFSe(String finNFSe) {
+            this.finNFSe = finNFSe;
+        }
+
         public String getcLocEmi() {
             return cLocEmi;
         }
@@ -199,6 +210,23 @@ public class DPS {
                     return "Produção";
                 default:
                     return "Homologação";
+            }
+        }
+
+        public String getxFinNFSe() {
+            if (finNFSe == null) {
+                return "-";
+            }
+
+            switch (finNFSe) {
+                case "0":
+                    return "NFS-e regular";
+                case "1":
+                    return "NFS-e de crédito";
+                case "2":
+                    return "NFS-e de débito";
+                default:
+                    return finNFSe;
             }
         }
     }
@@ -756,8 +784,6 @@ public class DPS {
     @XmlAccessorType(XmlAccessType.FIELD)
     public static class IbsCbsDPS {
 
-        @XmlElement(name = "finNFSe", namespace = "http://www.sped.fazenda.gov.br/nfse")
-        private String finNFSe;
         @XmlElement(name = "cIndOp", namespace = "http://www.sped.fazenda.gov.br/nfse")
         private String cIndOp;
         @XmlElement(name = "indDest", namespace = "http://www.sped.fazenda.gov.br/nfse")
@@ -765,14 +791,6 @@ public class DPS {
 
         @XmlElement(name = "valores", namespace = "http://www.sped.fazenda.gov.br/nfse")
         private IbsCbsValores valores;
-
-        public String getFinNFSe() {
-            return finNFSe;
-        }
-
-        public void setFinNFSe(String finNFSe) {
-            this.finNFSe = finNFSe;
-        }
 
         public String getcIndOp() {
             return cIndOp;
@@ -797,24 +815,6 @@ public class DPS {
         public void setValores(IbsCbsValores valores) {
             this.valores = valores;
         }
-
-        public String getxFinNFSe() {
-            if (finNFSe == null) {
-                return "-";
-            }
-
-            switch (finNFSe) {
-                case "0":
-                    return "NFS-e regular";
-                case "1":
-                    return "NFS-e de crédito";
-                case "2":
-                    return "NFS-e de débito";
-                default:
-                    return finNFSe;
-            }
-        }
-
     }
 
     @XmlAccessorType(XmlAccessType.FIELD)
