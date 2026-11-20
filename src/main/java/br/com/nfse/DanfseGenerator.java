@@ -154,7 +154,7 @@ public class DanfseGenerator {
         // =====================================================================
         // buildParams – todos os nomes correspondem ao danfse.jrxml
         // =====================================================================
-        private Map<String, Object> buildValues(NFSeXml nfse) {
+        public Map<String, Object> buildValues(NFSeXml nfse) {
             Map<String, Object> result = new HashMap<>();
 
             InfNFSe inf = nfse.getInfNFSe();
